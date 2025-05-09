@@ -1,0 +1,517 @@
+/* ===================== VARIABLES ===================== */
+:root {
+  --primary: #b94242;
+  --secundary: #2e4469;
+  --background: #35495e;
+  --black-text: rgb(61, 61, 61);
+  --white-text: #fff;
+  --button-hover: #753838;
+}
+
+@font-face {
+    font-family: Rancho;
+    src: url('assets/Rancho-Regular.ttf');
+}
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* ===================== NAVBAR ===================== */
+nav {
+  background-color: var(--primary);
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--white-text);
+  font-size: 20px;
+  letter-spacing: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  border-right: solid 0.1rem var(--black-text);
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li a {
+  color: var(--white-text);
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav ul li:hover {
+  background-color: var(--button-hover);
+  transition: all 0.3s;
+}
+
+.drawer {
+  color: var(--white-text);
+  float: left;
+  cursor: pointer;
+  display: none;
+  margin-left: 1rem;
+  border: solid 0.1rem var(--white-text);
+  padding: 0.2rem;
+  border-radius: 0.1rem;
+}
+
+#ckbox {
+  display: none;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background-color: var(--primary);
+  color: var(--white-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+
+/* ==========LANDING PAGE ========== */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 80vh;
+  padding: 1rem;
+}
+
+main h1, main p {
+  text-align: center;
+  color: var(--black-text);
+  margin: 1rem;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.main-landing-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 80vh;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.content, .image {
+  flex: 1;
+}
+
+
+/* ==========  CURRICULUM ========== */
+
+.curriculum_wrapper {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.curriculum_tabla {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tabla_cv {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tabla_cv th {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.4rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.tabla_cv td {
+  padding: 0.4rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.lista_estilizada {
+  padding-left: 1rem;
+  margin: 0.3rem 0;
+}
+
+
+
+/* ==========  FORMULARIO ========== */
+
+.fomulario_contacto {
+  display: flex;
+  height: 80vh;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.formulario_container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Formulario {
+  width: 100%;
+  max-width: 800px;
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Rancho;
+}
+
+.Formulario fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.Formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.Formulario input,
+.Formulario select,
+.Formulario textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.Formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.Formulario button {
+  margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: var(--primary);
+  color: var(--white-text);
+  border: none;
+}
+
+.outline-btn {
+  background-color: var(--white-text);
+  color: var(--primary);
+  border: solid 0.1rem var(--primary);
+}
+
+.primary-btn:hover,
+.outline-btn:hover {
+  background-color: var(--button-hover);
+  color: var(--white-text);
+}
+
+/* BLOQUE A LA DERECHA */
+.formulario_extra {
+  flex: 1;
+  background-color: #fcfcfc;
+  border-left: 2px solid #ccc;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.texto_contacto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.texto_contacto h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  
+}
+
+.ventajas_contacto {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.ventajas_contacto li {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.ventajas_contacto i {
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.iconos_formulario {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.iconos_formulario a {
+  font-size: 3.5rem;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.iconos_formulario a:hover {
+  transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .image {
+    display: none;
+  }
+
+  .fomulario_contacto {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .formulario_container,
+  .formulario_extra {
+    width: 100%;
+    height: auto;
+  }
+
+  .formulario_extra {
+    border-left: none;
+    border-top: 2px solid #ddd;
+    margin-top: 1rem;
+  }
+
+  .iconos_formulario {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .curriculum_wrapper {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .curriculum_tabla {
+    padding: 1rem;
+  }
+}
+
+
+
+
+
+
+/* ===================== PROYECTOS ===================== */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  height: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.project-card a.primary-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.project-card {
+  width: 250px;
+  min-height: 300px;
+  height: auto;
+}
+
+.primary-btn,
+.outline-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  border: none;
+}
+
+.primary-btn {
+  background-color: var(--primary);
+  color: var(--white-text);
+}
+
+.outline-btn {
+  background-color: var(--white-text);
+  color: var(--primary);
+  border: solid 0.1rem var(--primary);
+}
+
+.primary-btn:hover {
+  background-color: var(--white-text);
+  color: var(--primary);
+  transition: all 0.3s;
+}
+
+.outline-btn:hover {
+  background-color: var(--primary);
+  color: var(--white-text);
+  transition: all 0.3s;
+}
+
+/* ===================== RESPONSIVE NAV ===================== */
+@media (max-width: 1020px) {
+  .drawer {
+    display: block;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  nav h1 {
+    margin-left: 1rem;
+  }
+
+  ul.menu-box {
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--background);
+    top: 10vh;
+    left: -100%;
+    flex-direction: column;
+    transition: all 0.5s;
+    z-index: 100;
+  }
+
+  nav ul li {
+    padding: 1rem 0;
+    flex-direction: column;
+    padding-left: 2rem;
+    border-bottom: solid 0.1rem rgba(201, 196, 196, 0.4);
+  }
+
+  #ckbox:checked ~ .menu-box {
+    left: 0;
+  }
+
+  .main-landing-wrapper,
+  .curriculum-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav h1 {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+
+
+}
