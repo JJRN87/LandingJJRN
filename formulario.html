@@ -32,7 +32,7 @@
       <div class="Formulario">
         <form action="mailto:prueba1@ejemplo.com" method="post" enctype="multipart/form-data" autocomplete="on">
           <fieldset>
-            <legend>Datos de contacto</legend>
+            <legend class="">Datos de contacto</legend>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
 
@@ -45,7 +45,7 @@
 
           <fieldset>
             <legend>¿Cómo nos conociste?</legend>
-            <label for="conociste">Origen:</label>
+          
             <select name="conociste" id="conociste">
               <option value="instagram">Instagram</option>
               <option value="amigo">Recomendación</option>
@@ -58,10 +58,9 @@
 
           <fieldset>
             <legend>Comentarios</legend>
-            <label for="opinion">Cuéntanos tu opinión:</label>
+            <label for="opinion"></label>
             <textarea id="opinion" name="opinion" placeholder="Escribe lo que piensas..."></textarea>
           </fieldset>
-
           <button type="submit" class="primary-btn">Enviar</button>
           <button type="reset" class="outline-btn">Borrar</button>
         </form>
