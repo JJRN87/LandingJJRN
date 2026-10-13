@@ -2,62 +2,78 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos académicos de Javier Rodríguez Núñez: Museo CMS, Breaking Bad, calculadora Java, JavaDoc y Street Fighter.">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/8b16c5974b.js" crossorigin="anonymous"></script>
-    <title>Proyectos</title>
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <title>Proyectos | Javier Rodríguez Núñez</title>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <header>
-        <nav>
-            <input type="checkbox" id="ckbox">
-            <label for="ckbox" class="drawer" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </label>
-            <h1>Ciclos FP Informática</h1>
-            <ul class="menu-box">
-                <li><a href="index.html"><i class="fas fa-house"></i> Inicio</a></li>
-                <li><a href="formulario.html"><i class="fa-solid fa-comment"></i> Contacto</a></li>
-                <li><a href="proyectos.html"><i class="fa-solid fa-diagram-project"></i> Proyectos realizados</a></li>
-                <li><a href="https://github.com/JJRN87" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i> GitHub</a></li>
-                <li><a href="Curriculum.html"><i class="fa-solid fa-file"></i> Curriculum</a></li>
+        <nav aria-label="Navegación principal">
+            <!-- El menú conserva el checkbox original; también funciona con el teclado. -->
+            <input type="checkbox" id="ckbox" aria-controls="menu-principal" aria-label="Mostrar menú de navegación">
+            <label for="ckbox" class="drawer"><span aria-hidden="true">☰</span> Menú</label>
+            <p class="marca"><a href="index.html">Javier Rodríguez</a></p>
+            <ul class="menu-box" id="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+                <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+                <li><a href="https://github.com/JJRN87" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span></a></li>
+                <li><a href="Curriculum.html">Currículum</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="proyectos-wrapper">
-        <div class="project-list">
-          <div class="project-card">
-            <i class="fa-solid fa-flask project-icon"></i>
-            <h3>Proyecto: Breaking BAD</h3>
-            <p>Proyecto del segundo trimestre de LLMM. Primera página web realizada en el curso.</p>
-            <a href="https://jjrn87.github.io/LLMM_BreakingBad/" target="_blank" class="primary-btn" rel="noopener">Ver proyecto</a>
-          </div>
-          <div class="project-card">
-            <i class="fa-solid fa-calculator project-icon"></i>
-            <h3>Proyecto: Calculadora</h3>
-            <p>Actividad desarrollada en EE.DD. Incluye funcionalidades básicas de una calculadora.</p>
-            <a href="https://github.com/PabloTeranRueda/Calculadora_Grupo12_ED" target="_blank" class="primary-btn" rel="noopener">Repositorio GitHub</a>
-          </div>
-          <div class="project-card">
-            <i class="fa-solid fa-file-lines project-icon"></i>
-            <h3>Proyecto: JAVA DOC</h3>
-            <p>Ejercicio inicial de documentación con JavaDocs en la asignatura de EE.DD.</p>
-            <a href="https://jjrn87.github.io/E.D_2T_JavaDocs/" target="_blank" class="primary-btn" rel="noopener">Ver documentación</a>
-          </div>
-          <div class="project-card">
-            <i class="fa-solid fa-gamepad project-icon"></i>
-            <h3>Proyecto: Página LLMM StreetFight</h3>
-            <p>Web desarrollada bajo presión de tiempo como prueba en examen.</p>
-            <a href="https://jjrn87.github.io/streetfighter_LLMM/" target="_blank" class="primary-btn" rel="noopener">Ver página</a>
-          </div>
+    <main id="contenido" class="proyectos-wrapper" tabindex="-1">
+        <div class="cabecera-pagina">
+            <p class="etiqueta">Aprender haciendo</p>
+            <h1>Proyectos realizados</h1>
+            <p>Una selección de trabajos de DAM: desarrollo web, Java, documentación e integración de aplicaciones.</p>
         </div>
-      </main>
+        <div class="project-list">
+            <article class="project-card destacado">
+                <p class="project-icon" aria-hidden="true">01</p>
+                <h2>Museo CMS</h2>
+                <p class="tecnologias">React · Vite · API REST</p>
+                <p>Proyecto final colaborativo de DAM. Participación en el frontend y en la integración de la API REST de una aplicación con base de datos.</p>
+                <a href="https://github.com/andresBella96/museo-cms" target="_blank" class="primary-btn" rel="noopener noreferrer">Repositorio del equipo<span class="sr-only"> (nueva pestaña)</span></a>
+            </article>
+            <article class="project-card">
+                <p class="project-icon" aria-hidden="true">02</p>
+                <h2>Breaking Bad</h2>
+                <p class="tecnologias">HTML · CSS</p>
+                <p>Primera página web de la asignatura Lenguajes de Marcas. Práctica de estructura, estilos y organización del contenido.</p>
+                <a href="https://jjrn87.github.io/LLMM_BreakingBad/" target="_blank" class="primary-btn" rel="noopener noreferrer">Ver página<span class="sr-only"> (nueva pestaña)</span></a>
+            </article>
+            <article class="project-card">
+                <p class="project-icon" aria-hidden="true">03</p>
+                <h2>Calculadora</h2>
+                <p class="tecnologias">Java · Trabajo en equipo</p>
+                <p>Actividad colaborativa de Entornos de Desarrollo con las operaciones básicas de una calculadora.</p>
+                <a href="https://github.com/PabloTeranRueda/Calculadora_Grupo12_ED" target="_blank" class="primary-btn" rel="noopener noreferrer">Ver repositorio<span class="sr-only"> (nueva pestaña)</span></a>
+            </article>
+            <article class="project-card">
+                <p class="project-icon" aria-hidden="true">04</p>
+                <h2>Documentación JavaDoc</h2>
+                <p class="tecnologias">Java · Documentación</p>
+                <p>Ejercicio de documentación de código de Entornos de Desarrollo para explicar clases, métodos y su utilización.</p>
+                <a href="https://jjrn87.github.io/E.D_2T_JavaDocs/" target="_blank" class="primary-btn" rel="noopener noreferrer">Ver documentación<span class="sr-only"> (nueva pestaña)</span></a>
+            </article>
+            <article class="project-card">
+                <p class="project-icon" aria-hidden="true">05</p>
+                <h2>Street Fighter</h2>
+                <p class="tecnologias">HTML · CSS · Formularios</p>
+                <p>Web temática realizada como práctica de examen de Lenguajes de Marcas, con galería de personajes y formulario.</p>
+                <a href="https://jjrn87.github.io/streetfighter_LLMM/" target="_blank" class="primary-btn" rel="noopener noreferrer">Ver página<span class="sr-only"> (nueva pestaña)</span></a>
+            </article>
+        </div>
+    </main>
 
     <footer>
-        <p>Información basada en proyectos y links de Javier Rodríguez Núñez</p>
+        <p>Javier Rodríguez Núñez · Portfolio personal</p>
     </footer>
 </body>
 </html>
