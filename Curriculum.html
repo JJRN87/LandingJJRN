@@ -2,88 +2,135 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia, formación y competencias de Javier Rodríguez Núñez. Reporting, análisis operativo, CRM y Desarrollo de Aplicaciones Multiplataforma.">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/8b16c5974b.js" crossorigin="anonymous"></script>
-    <title>Curriculum</title>
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <title>Currículum | Javier Rodríguez Núñez</title>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <header>
-        <nav>
-            <input type="checkbox" id="ckbox">
-            <label for="ckbox" class="drawer" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </label>
-            <h1>Ciclos FP Informática</h1>
-            <ul class="menu-box">
-                <li><a href="index.html"><i class="fas fa-house"></i> Inicio</a></li>
-                <li><a href="formulario.html"><i class="fa-solid fa-comment"></i> Contacto</a></li>
-                <li><a href="proyectos.html"><i class="fa-solid fa-diagram-project"></i> Proyectos realizados</a></li>
-                <li><a href="https://github.com/JJRN87" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i> GitHub</a></li>
-                <li><a href="Curriculum.html"><i class="fa-solid fa-file"></i> Curriculum</a></li>
+        <nav aria-label="Navegación principal">
+            <!-- El menú conserva el checkbox original; también funciona con el teclado. -->
+            <input type="checkbox" id="ckbox" aria-controls="menu-principal" aria-label="Mostrar menú de navegación">
+            <label for="ckbox" class="drawer"><span aria-hidden="true">☰</span> Menú</label>
+            <p class="marca"><a href="index.html">Javier Rodríguez</a></p>
+            <ul class="menu-box" id="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="https://github.com/JJRN87" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span></a></li>
+                <li><a href="Curriculum.html" aria-current="page">Currículum</a></li>
             </ul>
         </nav>
     </header>
 
-  
+    <main id="contenido" class="curriculum_wrapper" tabindex="-1">
+        <section class="curriculum_tabla" aria-labelledby="titulo-cv">
+            <p class="etiqueta">Trayectoria profesional</p>
+            <h1 id="titulo-cv">Javier Rodríguez Núñez</h1>
+            <p class="subtitulo">Reporting y análisis de datos · CRM y soporte a negocio</p>
+            <p class="datos_cv">Madrid · <a href="mailto:jjrn87@gmail.com">jjrn87@gmail.com</a> ·
+                <a href="https://www.linkedin.com/in/jjrn87/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (nueva pestaña)</span></a> ·
+                <a href="https://github.com/JJRN87" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (nueva pestaña)</span></a></p>
 
-    <main class="curriculum_wrapper">
-
-      <section class="curriculum_tabla">
-        <h1>Currículum Vitae</h1>
-        <table class="tabla_cv">
-          <tr><th colspan="2">Perfil Profesional</th></tr>
-          <tr><td colspan="2">Gestor de apoyo corporativo en Correos desde 2018 con experiencia en BBDD, sistemas y atención al cliente.</td></tr>
-    
-          <tr><th colspan="2">Experiencia</th></tr>
-          <tr><td><strong>Correos</strong> (2018 - Actualidad)</td><td>Gestión de incidencias, soporte y organización.</td></tr>
-          <tr><td><strong>Gestor energético</strong> (2013 - 2018)</td><td>Asesoramiento y optimización de clientes en el sector energético.</td></tr>
-    
-          <tr><th colspan="2">Formación</th></tr>
-          <tr><td colspan="2">
-            <ul class="lista_estilizada">
-              <li>🎓 DAM – UNIR (2024-2026)</li>
-              <li>🎓 Bachillerato – UNED</li>
-            </ul>
-          </td></tr>
-    
-          <tr><th colspan="2">Habilidades</th></tr>
-          <tr><td colspan="2">
-            <ul class="lista_estilizada">
-              <li>💡 SQL</li>
-              <li>💡 Java</li>
-              <li>💡 Resolución de conflictos</li>
-              <li>💡 Autonomía</li>
-              <li>💡 Soft Skills</li>
-            </ul>
-          </td></tr>
-    
-          <tr><th colspan="2">Idiomas</th></tr>
-          <tr><td colspan="2">
-            <ul class="lista_estilizada">
-              <li>🌐 Español (nativo)</li>
-              <li>🌐 Inglés (avanzado)</li>
-            </ul>
-          </td></tr>
-    
-          <tr><th colspan="2">Hobbies</th></tr>
-          <tr><td colspan="2">
-            <ul class="lista_estilizada">
-              <li>🏍 Motos</li>
-              <li>🎮 Videojuegos</li>
-              <li>📚 Lectura</li>
-            </ul>
-          </td></tr>
-        </table>
-      </section>
-    
-      
+            <!-- Se mantiene la tabla original. Los roles conservan su semántica al apilarla en móvil. -->
+            <table class="tabla_cv" role="table">
+                <caption class="sr-only">Currículum: perfil, experiencia, formación, competencias e idiomas.</caption>
+                <tbody role="rowgroup">
+                    <tr role="row"><th role="rowheader" colspan="2" scope="rowgroup">Perfil profesional</th></tr>
+                    <tr role="row"><td role="cell" colspan="2">Gestor de Apoyo Corporativo en Correos, con más de diez años
+                        de trayectoria en gestión comercial y operaciones. Combino reporting y análisis
+                        operativo con gestión de incidencias y coordinación entre áreas. Titulado en DAM,
+                        con formación práctica en SQL y bases de datos. Orientado a datos, procesos y
+                        soporte funcional CRM.</td></tr>
+                </tbody>
+                <tbody role="rowgroup">
+                    <tr role="row"><th role="rowheader" colspan="2" scope="rowgroup">Experiencia profesional</th></tr>
+                    <tr role="row">
+                        <th role="rowheader" scope="row" class="puesto_cv">Correos
+                            <span>Gestor de Apoyo Corporativo</span>
+                            <span class="fecha_cv">Oct. 2023 – actualidad</span>
+                        </th>
+                        <td role="cell"><ul class="lista_estilizada">
+                            <li>Elaboración y actualización de informes con Excel avanzado para el seguimiento de clientes, envíos, reclamaciones y actividad del área.</li>
+                            <li>Consulta y análisis de informes e indicadores operativos en Power BI.</li>
+                            <li>Gestión de casos, solicitudes, contactos e informes en Salesforce CRM.</li>
+                            <li>Consulta y contraste de información en herramientas SAP.</li>
+                            <li>Coordinación con áreas comerciales y operativas para resolver y seguir incidencias postventa.</li>
+                            <li>Actualización de documentación y procedimientos internos; uso puntual de Power Automate.</li>
+                        </ul></td>
+                    </tr>
+                    <tr role="row">
+                        <th role="rowheader" scope="row" class="puesto_cv">Correos
+                            <span>Puesto operativo</span>
+                            <span class="fecha_cv">Oct. 2018 – oct. 2023</span>
+                        </th>
+                        <td role="cell">Reparto y operaciones de última milla, gestión de incidencias y conocimiento
+                            directo de los procesos de distribución y de la calidad del servicio.</td>
+                    </tr>
+                    <tr role="row">
+                        <th role="rowheader" scope="row" class="puesto_cv">CAL Estudios Inmobiliarios S.L.
+                            <span>Punto de atención Iberdrola (subcontrata)</span>
+                            <span class="fecha_cv">2013 – 2018</span>
+                        </th>
+                        <td role="cell"><ul class="lista_estilizada">
+                            <li>Asesor energético (2013–2015) y responsable de captación y fidelización (2015–2018).</li>
+                            <li>Gestión de una cartera de aproximadamente 500 contratos.</li>
+                            <li>Coordinación de un equipo de hasta 5 personas y soporte operativo al punto de atención.</li>
+                            <li>Análisis de consumos y elaboración de estudios de ahorro energético.</li>
+                        </ul></td>
+                    </tr>
+                </tbody>
+                <tbody role="rowgroup">
+                    <tr role="row"><th role="rowheader" colspan="2" scope="rowgroup">Formación</th></tr>
+                    <tr role="row"><td role="cell" colspan="2"><ul class="lista_estilizada">
+                        <li><strong>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).</strong>
+                            UNIR FP · 2024–2026 · Titulado.</li>
+                        <li><strong>PL-300 · Power BI Data Analyst.</strong> Preparación del examen en curso.</li>
+                        <li>Formación complementaria en Excel avanzado, Microsoft Power Apps y Power Automate,
+                            metodologías Agile y gestión de proyectos.</li>
+                    </ul></td></tr>
+                </tbody>
+                <tbody role="rowgroup">
+                    <tr role="row"><th role="rowheader" colspan="2" scope="rowgroup">Competencias técnicas</th></tr>
+                    <tr role="row"><td role="cell" colspan="2"><ul class="lista_estilizada">
+                        <li><strong>Uso profesional:</strong> Excel avanzado, Power BI (informes e indicadores),
+                            Salesforce CRM, herramientas SAP y Power Automate (uso puntual).</li>
+                        <li><strong>Formación y proyectos:</strong> SQL, MySQL, PostgreSQL, Java/JPA,
+                            React/Vite, integración de API REST y Git/GitHub.</li>
+                        <li><strong>Competencias transversales:</strong> análisis operativo, documentación,
+                            coordinación entre áreas y resolución de incidencias.</li>
+                    </ul></td></tr>
+                </tbody>
+                <tbody role="rowgroup">
+                    <tr role="row"><th role="rowheader" colspan="2" scope="rowgroup">Proyecto académico destacado</th></tr>
+                    <tr role="row"><td role="cell" colspan="2"><strong>Museo CMS · Proyecto final colaborativo de DAM.</strong>
+                        Aplicación web con base de datos. Participación en el frontend con React/Vite
+                        e integración de la API REST.
+                        <a href="https://github.com/andresBella96/museo-cms" target="_blank" rel="noopener noreferrer">Repositorio del equipo<span class="sr-only"> (nueva pestaña)</span></a>.
+                    </td></tr>
+                </tbody>
+                <tbody role="rowgroup">
+                    <tr role="row"><th role="rowheader" colspan="2" scope="rowgroup">Idiomas</th></tr>
+                    <tr role="row"><td role="cell" colspan="2"><ul class="lista_estilizada">
+                        <li>Español nativo.</li>
+                        <li>Inglés B2. Estancia de un año en Inglaterra (2010–2011).</li>
+                    </ul></td></tr>
+                </tbody>
+                <tbody role="rowgroup">
+                    <tr role="row"><th role="rowheader" colspan="2" scope="rowgroup">Intereses</th></tr>
+                    <tr role="row"><td role="cell" colspan="2">Motos, videojuegos y lectura.</td></tr>
+                </tbody>
+            </table>
+            <p class="actualizacion">Actualizado en <time datetime="2026-10">octubre de 2026</time>.</p>
+        </section>
     </main>
 
     <footer>
-        <p>Información basada en proyectos y links de Javier Rodríguez Núñez</p>
+        <p>Javier Rodríguez Núñez · Portfolio personal</p>
     </footer>
 </body>
 </html>

@@ -1,96 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
-  <script src="https://kit.fontawesome.com/8b16c5974b.js" crossorigin="anonymous"></script>
-  <title>Contacto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Javier Rodríguez Núñez para oportunidades relacionadas con datos, reporting, procesos y soporte funcional CRM.">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <title>Contacto | Javier Rodríguez Núñez</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <input type="checkbox" id="ckbox" />
-      <label for="ckbox" class="drawer" aria-label="Abrir menú">
-        <i class="fas fa-bars"></i>
-      </label>
-      <h1>Ciclos FP Informática</h1>
-      <ul class="menu-box">
-        <li><a href="index.html"><i class="fas fa-house"></i> Inicio</a></li>
-        <li><a href="formulario.html"><i class="fa-solid fa-comment"></i> Contacto</a></li>
-        <li><a href="proyectos.html"><i class="fa-solid fa-diagram-project"></i> Proyectos realizados</a></li>
-        <li><a href="https://github.com/JJRN87" target="_blank" rel="noopener"><i class="fa-solid fa-user"></i> GitHub</a></li>
-        <li><a href="Curriculum.html"><i class="fa-solid fa-file"></i> Curriculum</a></li>
-      </ul>
-    </nav>
-  </header>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <main class="fomulario_contacto">
-    <section class="formulario_container">
-      <div class="Formulario">
-        <form action="mailto:prueba1@ejemplo.com" method="post" enctype="multipart/form-data" autocomplete="on">
-          <fieldset>
-            <legend class="">Datos de contacto</legend>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+    <header>
+        <nav aria-label="Navegación principal">
+            <!-- El menú conserva el checkbox original; también funciona con el teclado. -->
+            <input type="checkbox" id="ckbox" aria-controls="menu-principal" aria-label="Mostrar menú de navegación">
+            <label for="ckbox" class="drawer"><span aria-hidden="true">☰</span> Menú</label>
+            <p class="marca"><a href="index.html">Javier Rodríguez</a></p>
+            <ul class="menu-box" id="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html" aria-current="page">Contacto</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="https://github.com/JJRN87" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span></a></li>
+                <li><a href="Curriculum.html">Currículum</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <label for="Empresa">Empresa:</label>
-            <input type="text" id="Empresa" name="Empresa" placeholder="Empresa de contacto" />
+    <main id="contenido" class="formulario_contacto" tabindex="-1">
+        <section class="formulario_container" aria-labelledby="titulo-contacto">
+            <div class="Formulario">
+                <h1 id="titulo-contacto">Contacto</h1>
+                <p class="formulario_aviso" id="aviso-correo">El formulario abre tu aplicación de correo:
+                    revisa y envía el mensaje desde allí. No se envía automáticamente ni se almacena en esta web.
+                    Nombre, correo y mensaje son obligatorios.</p>
+                <form action="mailto:jjrn87@gmail.com" method="post" enctype="text/plain"
+                      autocomplete="on" aria-describedby="aviso-correo">
+                    <fieldset>
+                        <legend>Datos de contacto</legend>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"
+                               autocomplete="name" maxlength="100" required>
 
-            <label for="correo">Correo Electrónico:</label>
-            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required />
-          </fieldset>
+                        <label for="empresa">Empresa (opcional):</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Empresa de contacto"
+                               autocomplete="organization" maxlength="150">
 
-          <fieldset>
-            <legend>¿Cómo nos conociste?</legend>
-          
-            <select name="conociste" id="conociste">
-              <option value="instagram">Instagram</option>
-              <option value="amigo">Recomendación</option>
-              <option value="plataforma">Plataformas de empleo</option>
-              <option value="facebook">Facebook</option>
-              <option value="internet">Internet</option>
-              <option value="pinterest">Pinterest</option>
-            </select>
-          </fieldset>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com"
+                               autocomplete="email" maxlength="254" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Cómo me has encontrado</legend>
+                        <label for="conociste">¿Dónde has visto mi perfil? (opcional)</label>
+                        <select name="conociste" id="conociste">
+                            <option value="">Selecciona una opción</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="github">GitHub</option>
+                            <option value="recomendacion">Recomendación</option>
+                            <option value="empleo">Plataformas de empleo</option>
+                            <option value="internet">Búsqueda en Internet</option>
+                            <option value="otro">Otro medio</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Mensaje</legend>
+                        <label for="opinion">¿En qué puedo ayudarte?</label>
+                        <textarea id="opinion" name="mensaje" rows="5" maxlength="2000"
+                                  placeholder="Cuéntame el motivo de tu contacto..." required></textarea>
+                    </fieldset>
+                    <div class="button-links">
+                        <button type="submit" class="primary-btn">Abrir correo</button>
+                        <button type="reset" class="outline-btn">Borrar</button>
+                    </div>
+                </form>
+                <p class="formulario_aviso">Si no se abre tu correo, puedes escribir directamente a
+                    <a href="mailto:jjrn87@gmail.com">jjrn87@gmail.com</a>.</p>
+            </div>
+        </section>
 
-          <fieldset>
-            <legend>Comentarios</legend>
-            <label for="opinion"></label>
-            <textarea id="opinion" name="opinion" placeholder="Escribe lo que piensas..."></textarea>
-          </fieldset>
-          <button type="submit" class="primary-btn">Enviar</button>
-          <button type="reset" class="outline-btn">Borrar</button>
-        </form>
-      </div>
-    </section>
+        <section class="formulario_extra" aria-labelledby="titulo-hablamos">
+            <div class="texto_contacto">
+                <p class="etiqueta">Datos · Procesos · Tecnología</p>
+                <h2 id="titulo-hablamos">Hablemos</h2>
+                <p>Me interesan oportunidades en reporting, análisis de datos y soporte funcional CRM,
+                    donde aportar mi experiencia en negocio y operaciones junto con mi formación técnica.</p>
+                <ul class="ventajas_contacto">
+                    <li>Reporting y análisis operativo.</li>
+                    <li>Procesos y herramientas de negocio.</li>
+                    <li>Proyectos de formación y colaboración.</li>
+                </ul>
+            </div>
+            <div class="iconos_formulario">
+                <a href="https://github.com/JJRN87" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span></a>
+                <a href="https://www.linkedin.com/in/jjrn87/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span></a>
+            </div>
+        </section>
+    </main>
 
-    <section class="formulario_extra">
-      <div class="texto_contacto">
-        <h1>Hey you!</h1>
-        <p>
-          Si te han gustado mis proyectos, deseas trabajar conmigo o consideras que puedo encajar en tu organización,
-          no dudes en contactarme rellenando los datos del formulario.
-        </p>
-        <ul class="ventajas_contacto">
-          <li><i class="fa-solid fa-check"></i> Colaboraciones freelance</li>
-          <li><i class="fa-solid fa-check"></i> Proyectos creativos a medida</li>
-          <li><i class="fa-solid fa-check"></i> Respuesta rápida garantizada</li>
-        </ul>
-      </div>
-      <div class="iconos_formulario">
-        <a href="https://github.com/JJRN87" title="Mi GitHub" aria-label="Mi GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://infojobs.net" target="_blank" title="InfoJobs"><i class="fa-solid fa-briefcase"></i></a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>Información basada en proyectos y links de Javier Rodríguez Núñez</p>
-  </footer>
+    <footer>
+        <p>Javier Rodríguez Núñez · Portfolio personal</p>
+    </footer>
 </body>
 </html>
