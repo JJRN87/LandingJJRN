@@ -1,7 +1,11 @@
-# LandingJJRN
+# Web personal
 
-Web personal creada inicialmente como actividad de clase de la asignatura de Lenguajes de Marcas, durante el ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM).
+[Ver la web y el currículum](https://jjrn87.github.io/LandingJJRN/)
 
-En 2026 la he actualizado con mi currículum, proyectos académicos y una página de contacto, dando continuidad al trabajo realizado en clase.
+Esta web empezó como una actividad de Lenguajes de Marcas durante DAM. En 2026 la he actualizado para reunir mi currículum y mis proyectos.
 
-Está desarrollada con HTML y CSS. Mantiene la estructura sencilla del proyecto original, incorporando correcciones y mejoras visuales para adaptarse a ordenador y móvil.
+Está hecha con HTML y CSS. He conservado la estructura del ejercicio, con ajustes para ordenador y móvil.
+
+Incluye mi experiencia en Correos y energía, la formación en DAM, Museo CMS y otras prácticas del ciclo. Olist Analytics aparece como proyecto de Power BI en desarrollo.
+
+La página de proyectos enlaza el código y la memoria de Museo CMS. El formulario de contacto abre la aplicación de correo del visitante.

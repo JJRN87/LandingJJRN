@@ -425,3 +425,7 @@ footer {
     .tabla_cv tr { break-inside: avoid; }
     a { color: inherit; }
 }
+
+
+/* Separación entre proyectos en la página de trayectoria. */
+.tabla_cv td p + p { margin-top: 0.75rem; }
