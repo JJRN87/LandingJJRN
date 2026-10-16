@@ -8,4 +8,4 @@ Está hecha con HTML y CSS. He conservado la estructura del ejercicio, con ajust
 
 Incluye mi experiencia en Correos y energía, la formación en DAM, Museo CMS y otras prácticas del ciclo. Olist Analytics aparece como proyecto de Power BI en desarrollo.
 
-La página de proyectos enlaza el código y la memoria de Museo CMS. El formulario de contacto abre la aplicación de correo del visitante.
+La página de proyectos enlaza el código y la memoria de Museo CMS. La página de contacto enlaza mi perfil de LinkedIn.

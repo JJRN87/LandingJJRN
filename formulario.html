@@ -31,62 +31,22 @@
         <section class="formulario_container" aria-labelledby="titulo-contacto">
             <div class="Formulario">
                 <h1 id="titulo-contacto">Contacto</h1>
-                <p class="formulario_aviso" id="aviso-correo">El formulario abre tu aplicación de correo:
-                    revisa y envía el mensaje desde allí. No se envía automáticamente ni se almacena en esta web.
-                    Nombre, correo y mensaje son obligatorios.</p>
-                <form action="mailto:jjrn87@gmail.com" method="post" enctype="text/plain"
-                      autocomplete="on" aria-describedby="aviso-correo">
-                    <fieldset>
-                        <legend>Datos de contacto</legend>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"
-                               autocomplete="name" maxlength="100" required>
-
-                        <label for="empresa">Empresa (opcional):</label>
-                        <input type="text" id="empresa" name="empresa" placeholder="Empresa de contacto"
-                               autocomplete="organization" maxlength="150">
-
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com"
-                               autocomplete="email" maxlength="254" required>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Cómo me has encontrado</legend>
-                        <label for="conociste">¿Dónde has visto mi perfil? (opcional)</label>
-                        <select name="conociste" id="conociste">
-                            <option value="">Selecciona una opción</option>
-                            <option value="linkedin">LinkedIn</option>
-                            <option value="github">GitHub</option>
-                            <option value="recomendacion">Recomendación</option>
-                            <option value="empleo">Plataformas de empleo</option>
-                            <option value="internet">Búsqueda en Internet</option>
-                            <option value="otro">Otro medio</option>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Mensaje</legend>
-                        <label for="opinion">¿En qué puedo ayudarte?</label>
-                        <textarea id="opinion" name="mensaje" rows="5" maxlength="2000"
-                                  placeholder="Cuéntame el motivo de tu contacto..." required></textarea>
-                    </fieldset>
-                    <div class="button-links">
-                        <button type="submit" class="primary-btn">Abrir correo</button>
-                        <button type="reset" class="outline-btn">Borrar</button>
-                    </div>
-                </form>
-                <p class="formulario_aviso">Si no se abre tu correo, puedes escribir directamente a
-                    <a href="mailto:jjrn87@gmail.com">jjrn87@gmail.com</a>.</p>
+                <p>Para comentar una oportunidad profesional o preguntar por algún proyecto,
+                    puedes contactar conmigo a través de LinkedIn.</p>
+                <div class="button-links">
+                    <a href="https://www.linkedin.com/in/jjrn87/" target="_blank"
+                       class="primary-btn" rel="noopener noreferrer">Ver mi perfil en LinkedIn<span class="sr-only"> (nueva pestaña)</span></a>
+                </div>
             </div>
         </section>
 
         <section class="formulario_extra" aria-labelledby="titulo-hablamos">
             <div class="texto_contacto">
                 <p class="etiqueta">Contacto profesional</p>
-                <h2 id="titulo-hablamos">Correo y LinkedIn</h2>
+                <h2 id="titulo-hablamos">Perfil y proyectos</h2>
                 <p>Me interesan puestos de reporting, Business Intelligence y análisis de operaciones
                     en los que pueda aprovechar mi experiencia en Correos y mi formación en DAM.</p>
-                <p>Para comentar una oportunidad o preguntar por algún proyecto, puedes escribirme a
-                    <a href="mailto:jjrn87@gmail.com">jjrn87@gmail.com</a> o contactar por LinkedIn.</p>
+                <p>En GitHub puedes consultar el código y la documentación de mis proyectos.</p>
             </div>
             <div class="iconos_formulario">
                 <a href="https://github.com/JJRN87" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span></a>
