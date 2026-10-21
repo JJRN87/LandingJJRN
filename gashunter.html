@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GasHunter: app Android con datos públicos, mapas y rutas. Proyecto personal de Javier Rodríguez Núñez, en prueba cerrada de Google Play.">
+    <meta property="og:title" content="GasHunter | App Android con datos públicos">
+    <meta property="og:description" content="Consulta el proyecto, las capturas y el trabajo de definición funcional, datos y pruebas. En prueba cerrada de Google Play.">
+    <meta property="og:image" content="https://jjrn87.github.io/LandingJJRN/assets/img/gashunter-ruta.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jjrn87.github.io/LandingJJRN/gashunter.html">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <title>GasHunter | Javier Rodríguez Núñez</title>
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header>
+        <nav aria-label="Navegación principal">
+            <!-- El menú conserva el checkbox original; también funciona con el teclado. -->
+            <input type="checkbox" id="ckbox" aria-controls="menu-principal" aria-label="Mostrar menú de navegación">
+            <label for="ckbox" class="drawer"><span aria-hidden="true">☰</span> Menú</label>
+            <p class="marca"><a href="index.html">Javier Rodríguez</a></p>
+            <ul class="menu-box" id="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="https://github.com/JJRN87" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span></a></li>
+                <li><a href="Curriculum.html">Currículum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido" class="case-study" tabindex="-1">
+        <div class="cabecera-pagina">
+            <p class="etiqueta">Proyecto personal · Android y datos públicos</p>
+            <h1>GasHunter</h1>
+            <p>Comparar precios de carburantes y encontrar opciones cerca de una zona o ruta.</p>
+            <p class="project-status">En prueba cerrada de Google Play · Publicación general pendiente</p>
+        </div>
+        <section class="case-intro" aria-labelledby="problema">
+            <div>
+                <h2 id="problema">La idea</h2>
+                <p>Quería consultar precios y estaciones sin perder de vista el recorrido. GasHunter permite elegir una zona o una ruta, filtrar por combustible y explorar las opciones en un mapa o una lista.</p>
+                <h2>Mi participación</h2>
+                <p>He definido las funcionalidades, priorizado cambios de la interfaz y probado búsquedas, filtros y rutas. La implementación y parte de la documentación se han realizado con apoyo de IA, revisando el funcionamiento y los resultados.</p>
+                <p class="tecnologias">Kotlin · Jetpack Compose · MapLibre · Datos MITECO · Python · GitHub Actions</p>
+                <p>La app está en prueba cerrada de Google Play. Esta página muestra el proyecto; todavía no hay una descarga pública general.</p>
+            </div>
+            <figure>
+                <a href="assets/img/gashunter-ruta.png"><img src="assets/img/gashunter-ruta.png" alt="GasHunter con ruta de ejemplo de Madrid a A Coruña, mapa, filtros y precios de gasolineras" width="1080" height="2400"></a>
+                <figcaption>Ruta de ejemplo en una versión en pruebas. Pulsa la imagen para ampliarla.</figcaption>
+            </figure>
+        </section>
+        <section class="case-section" aria-labelledby="datos">
+            <h2 id="datos">Datos y comprobaciones</h2>
+            <p>El proyecto combina precios de MITECO con mapas y servicios de rutas. También incluye un catálogo de recarga preparado a partir de datos públicos RIPREE: normalización de registros, comprobación de ubicaciones y horarios y conservación de la procedencia de la información.</p>
+            <p>Un proceso con Python y GitHub Actions actualiza ese catálogo. Si la descarga o las comprobaciones fallan, se conserva la última publicación válida. Los horarios de la fuente no confirman ocupación ni averías en tiempo real.</p>
+            <p><a href="https://github.com/JJRN87/JJRN87.github.io/tree/main/catalog-service" target="_blank" rel="noopener noreferrer">Ver la documentación pública del catálogo<span class="sr-only"> (nueva pestaña)</span></a></p>
+        </section>
+        <section class="case-section case-secondary" aria-labelledby="detalle">
+            <div>
+                <h2 id="detalle">Información útil y límites claros</h2>
+                <p>Las fichas reúnen ubicación, características y condiciones disponibles en la fuente. Distinguen los datos conocidos de lo que no se puede confirmar. Las pruebas también sirven para ajustar la información que se muestra y cómo se presenta.</p>
+                <p>Las capturas pertenecen a una versión de desarrollo en pruebas; algunas pantallas pueden diferir de la versión distribuida a los testers.</p>
+            </div>
+            <figure>
+                <a href="assets/img/gashunter-ficha.png"><img src="assets/img/gashunter-ficha.png" alt="Ficha de un punto de recarga público con ubicación, potencia, conectores y límites de la información disponible" width="1080" height="2400" loading="lazy"></a>
+                <figcaption>Ficha de un establecimiento público en la versión en pruebas.</figcaption>
+            </figure>
+        </section>
+        <div class="button-links">
+            <a href="proyectos.html" class="primary-btn">Ver todos los proyectos</a>
+            <a href="https://www.linkedin.com/in/jjrn87/" target="_blank" rel="noopener noreferrer" class="outline-btn">LinkedIn<span class="sr-only"> (nueva pestaña)</span></a>
+        </div>
+    </main>
+    <footer><p>Javier Rodríguez Núñez · Portfolio personal</p></footer>
+</body>
+</html>
